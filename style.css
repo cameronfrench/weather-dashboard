@@ -18,3 +18,27 @@
     text-transform: none; 
     font-style: italic;
   }
+
+  main { 
+    margin: 65px;
+  }
+
+  .search-box {
+    display: block; 
+  }
+
+  .search-title {
+    font-size: 22px; 
+  }
+
+  .search-city { 
+    border: 1px; 
+    padding-top: 15px;
+    padding-bottom: 15px;  
+  }
+
+  .search-input { 
+    font-size: 18px;
+    padding: 5px;
+
+  }

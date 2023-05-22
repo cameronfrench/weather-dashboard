@@ -14,20 +14,19 @@
       <p>Search for weather conditions by city.</p>
     </header>
 
-    <main class="">
-      <div class="">
-        <div class="card">
-          <h3 class="">Search for a City</h3>
-          <form id="city-form" class="card-body">
-            <label class="form-label"></label>
+    <main>
+        <div class="search-box">
+          <h3 class="search-title">Search for a City</h3>
+          <form class="search-city">
+            <label class="search-label"></label>
             <input
               name="username"
               id="username"
               type="text"
               autofocus="true"
-              class="form-input"
+              class="search-input"
             />
-            <button type="submit" class="btn">Search</button>
+            <button class="search-button">Search</button>
           </form>
         </div>
 
@@ -37,9 +36,19 @@
             <button class="btn"></button>
             <button class="btn"></button>
             <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
+            <button class="btn"></button>
           </div>
         </div>
-      </div>
+        <div class="current-weather">
+            <h2 class="current-weather-title">Today's Weather:</h2>
+            <div class="current-weather-container"></div>
+        </div>
+        <div class="five-day">
+            <h2 class="five-day-title">Five-Day Forecast:</h2>
+            <div class="five-day-container"></div>
+        </div>
     </main>
 
     <script src="./script.js"></script>
