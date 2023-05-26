@@ -10,6 +10,6 @@ In this project, I built a Weather Dashboard that incorporated a search function
 
 ## Link to Project 
 
-Github: 
+Github: https://github.com/cameronfrench/weather-dashboard
 
-Live Link: 
+Live Link: https://cameronfrench.github.io/weather-dashboard/
