@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css">
-    <title>Weather Dashboard</title>
-  </head>
 
-  <body class="">
-    <header class="hero">
-      <h1 class="app-title">Weather Dashboard</h1>
-      <p>Search for weather conditions by city.</p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Weather Dashboard</title>
+</head>
 
-    <main>
-        <div class="search-box">
-          <h3 class="search-title">Search for a City</h3>
-          <form class="search-city">
-            <label class="search-label"></label>
-            <input
-              name="username"
-              id="username"
-              type="text"
-              autofocus="true"
-              class="search-input"
-            />
-            <button class="search-button">Search</button>
-          </form>
-        </div>
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">
+      Weather Dashboard
+    </h1>
+    <p>Search for weather by City. 
+    </p>
+  </header>
 
-        <div class="card">
-          <h3 class="card-header text-uppercase">Previously Search Cities</h3>
-          <div id="city-buttons" class="card-body">
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
-          </div>
-        </div>
-        <div class="current-weather">
-            <h2 class="current-weather-title">Today's Weather:</h2>
-            <div class="current-weather-container"></div>
-        </div>
-        <div class="five-day">
-            <h2 class="five-day-title">Five-Day Forecast:</h2>
-            <div class="five-day-container"></div>
-        </div>
-    </main>
 
-    <script src="./script.js"></script>
-  </body>
+  <main class="flex-row justify-space-between">
+    <div class="col-5 col-md-4">
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search By City</h3>
+        <form id="city-form" class="card-body">
+          <label class="form-label" for="username">City Name</label>
+          <input name="username" id="city" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Previously Searched Cities</h3>
+        <div id="city-buttons" class="card-body">
+          <!-- <button data-language="javascript" class="btn">JavaScript</button>
+          <button data-language="html" class="btn">HTML</button>
+          <button data-language="css" class="btn">CSS</button> -->
+        </div>
+      </div>
+    </div>
+    <section class="col-7">
+      <div class="m-5">
+        <h2 class="subtitle">Current Forecast: <span id="city-search-term"></span></h2>
+        <div id="current-forecast-container" class="list-group"></div>
+      </div>
+      <div class="col">
+        <div class="col">
+          <h2 class="subtitle">5-Day Forecast: <span id="city-search-term"></span></h2>
+        </div>
+        <div class="row">
+          <div id="five-day-container" class="list-group"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
