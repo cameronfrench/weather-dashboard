@@ -50,6 +50,7 @@ var buttonClickHandler = function (event) {
 var getCurrentWeather = function (city) {
 var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city  + '&limit=1&appid=0e99ce2bf674f4d3c3a3a85697c471a6&units=imperial' 
 
+
 fetch(apiUrl)
     .then(function (response) {
     if (response.ok) {
@@ -138,3 +139,4 @@ var getFiveDay = function (city) {
 
 cityFormEl.addEventListener('submit', formSubmitHandler);
 cityButtonsEl.addEventListener('click', buttonClickHandler);
+
